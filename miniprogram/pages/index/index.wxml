@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+<view class=''>
+<image src='../../images/background.png'></image>
+
+
+<button hover-class='wsui-btn__hover_btn' class='buttonto'  bindgetuserinfo='bindGetUserInfo' open-type="getUserInfo"  lang="zh_CN" bindtap="goIndex"  >
+开启购书之旅
+</button>
+
+</view>
+  
+

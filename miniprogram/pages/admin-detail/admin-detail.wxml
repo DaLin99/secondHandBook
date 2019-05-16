@@ -1,0 +1,153 @@
+<view class='blackboard-img-container'>
+  <image class='blackboard-img' src='../../../../../images/book-backgroud.png' mode='scaleToFill'></image>
+  <image class='book-img' mode='scaleToFill' src='{{book.img}}' mode='scaleToFill'></image>
+</view>
+<!-- 第一部分：灰色+白色d -->
+<view class='big_contain'>
+  <view class='contain3'>
+    <view class='detail_book_message3'>
+
+      <view class='info-title'>
+        <text>基本信息</text>
+      </view>
+
+
+      <view class='top'></view>
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">书名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{book.title}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">作者</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{book.author}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">ISBN</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{book.isbn}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">出版社</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{book.publisher}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">出版时间</view>
+        </view>
+        <view class="weui-cell__bd">
+         <text class="" wx:if="{{isPbd}}">{{book.pubdate}}</text>
+      <text class="" wx:if="{{!isPbd}}">暂无哦</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">简介</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text wx-if:='{{!isNone}}'>{{book.gist}}</text>
+          <text wx-if:='{{isNone}}'>暂无哦</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">原价</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{book.price}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">分类</view>
+        </view>
+        <view class="weui-cell__bd">
+      <text  >{{book.category}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">新旧</view>
+        </view>
+        <view class="weui-cell__bd">
+             <text>￥{{book.looklike}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">出价</view>
+        </view>
+        <view class="weui-cell__bd">
+   <text>￥{{book.newprice}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">备注</view>
+        </view>
+        <view class="weui-cell__bd">
+         <text>{{book.remark}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">微信</view>
+        </view>
+        <view class="weui-cell__bd">
+             <text>{{book.wechat}}</text>
+        </view>
+      </view>
+
+<block wx:if="{{reason}}">
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+      
+          <view class="weui-label"> <text style='color:red'>*</text>原因</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="pickreascon" mode="selector" value="{{reason_index}}" range="{{reasons}}">
+                 <text>{{reasons[reason_index]}}</text>
+        </picker>
+        </view>
+      </view>
+      <button class="sure-no" bindtap="noSell" disabled='{{disabled}}'> 确定不发布</button>
+      </block>
+
+    </view>
+  </view>
+</view>
+ <block wx:if="{{!reason}}">
+  <view class="two-btns">
+    <button class="myok" bindtap="toSell" disabled="{{reason}}"> 发布 </button>
+    <button class="mynook" bindtap="displayReason" disabled="{{reason}}"> 不发布</button>
+  </view>
+      </block>
+
+ 
+
+     

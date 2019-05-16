@@ -1,0 +1,17 @@
+<!--pages/checking/checking.wxml-->
+<import src="../book_template/book_template.wxml" />
+<view class='checking_text'>
+<text>正在审核的书</text>
+</view>
+<block wx:if="{{!isShow_checking}}">
+  <view class="none">
+   <image src='../../images/none.png'></image>
+  </view>
+</block>
+<block wx:if="{{isShow_checking}}">
+  <view class="mybook" wx:for="{{checkbook_list}}" wx:key="{{index}}" >
+<view class='book_box'  data-id="{{item._id }}" bindtap="navTocheckDetail">
+   <template is="book_template" data="{{...item}}" />
+  </view>
+</view>
+</block>

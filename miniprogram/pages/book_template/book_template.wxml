@@ -1,0 +1,11 @@
+<template name="book_template">
+      <view class='book_list' hover-class='book_hover' hover-stay-time='300'>
+<view class='book_imgae'>
+<image class='bookimage1'  src='../../images/book1.png'></image>
+<image class='bookimage' src='{{img}}'></image>
+<text class='book_name'>{{title}}</text>
+<text class='book_Arthur'>{{author}}</text>
+<text class='book_price'>￥{{newprice}}</text>
+</view>
+</view>
+</template>

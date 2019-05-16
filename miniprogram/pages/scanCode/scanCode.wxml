@@ -1,0 +1,15 @@
+<!--pages/scanCode/scanCode.wxml-->
+
+<view class='topText'>
+    <text >卖书步骤</text>
+</view>
+<view class='bigGild'>
+  <image class='bigImage' src='/images/scanCodeAddBook.png' ></image>
+</view>
+<view hover-class='wsui-btn__hover_btn' class='buttonbox' bindtap='myscanCode'>
+  <image class='button1' src='/images/ScanCodeButton.png' ></image>
+</view>
+
+<!--<van-button type="primary" bind:click="myscanCode">扫码</van-button>-->
+
+  

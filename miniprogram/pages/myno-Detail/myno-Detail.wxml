@@ -1,0 +1,96 @@
+<!-- pages/input/input.wxml -->
+
+<form class="" report-submit="false" bindsubmit="" bindreset="">
+
+<view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+   <view class="palyToRow">
+    <text class='item-left'>不过原因：</text>
+      <text class='item-right'>{{book.reason}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 书名 -->
+  <view class="palyToRow">
+    <text class='item-left'>书名：</text>
+      <text class='item-right'>{{book.title}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!--ISBN-->
+  <view class="palyToRow">
+    <text class='item-left'>ISBN：</text>
+    <text>{{book.isbn}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 作者 -->
+  <view class="palyToRow">
+    <text class="item-left">作者：</text>
+   <text>{{book.author}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  
+  <!--书原价-->
+  <view class="palyToRow">
+    <text class="item-left">原价：</text>
+   <text>{{book.price}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 书的分类 -->
+ <view class="palyToRow">
+    <text class="item-left">分类：</text>
+   <text>{{book.category}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 书的品相 -->
+    <view class="palyToRow">
+    <text class="item-left">品相：</text>
+   <text>{{book.looklike}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 出价 -->
+  <view class="palyToRow">
+    <text class="item-left">你想出价：</text>
+     <text>{{book.newprice}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 卖家微信 -->
+  <view class="palyToRow">
+    <text class="item-left">你的微信：</text>
+    <text>{{book.wechat}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 卖家备注 -->
+  <view class="palyToRow">
+    <text class="item-left">备注：</text>
+      <text>{{book.remark}}</text>
+  </view>
+  <view class='divLine-container'>
+    <view class="divLine"></view>
+  </view>
+  <!-- 卖书按钮 
+  <view class="">
+    <van-button  bind:click="formSubmit">确定</van-button>
+  </view>-->
+ <view class='mybtn-container'>
+      <button class='renew-bnt' type="primary" bindtap='navToScan'>重新发布</button>
+       <button class='del-bnt' type="primary" bindtap='del_nosell' >删除</button>
+ </view>
+</form>

@@ -1,0 +1,136 @@
+<!-- pages/input/input.wxml -->
+
+
+
+<view class='blackboard-img-container'>
+  <image class='background' src='../../../../../images/blackboard.jpg' mode='scaleToFill'></image>
+  <view class='book-img'></view>
+</view>
+<!-- 第一部分：灰色+白色d -->
+<view class='big_contain'>
+  <view class='contain3'>
+    <view class='detail_book_message3'>
+
+      <view class='info-title'>
+        <text>基本信息</text>
+      </view>
+
+
+      <view class='top'></view>
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">书名</view>
+        </view>
+        <view class="weui-cell__bd">
+    <input class='inputwechet' type="text" bind:change="btitleInput" placeholder="请填-书名" />
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">作者</view>
+        </view>
+        <view class="weui-cell__bd">
+     <input class='inputwechet' type="text" bind:change="bauthorInput" placeholder="请填-作者" />
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">ISBN</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class='inputwechet' type="text" bind:change="bisbnInput" placeholder="请填-ISBN" />
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">出版社</view>
+        </view>
+        <view class="weui-cell__bd">
+             <input class='inputwechet' type="text" bind:change="publisherInput" placeholder="请填-出版社" />
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">出版时间</view>
+        </view>
+        <view class="weui-cell__bd">
+    <input class='inputwechet' type="text" bind:change="pubdateInput" placeholder="请填-出版时间" />
+        </view>
+      </view>
+
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">原价</view>
+        </view>
+        <view class="weui-cell__bd">
+    <input class='inputwechet' type="text" bind:change="priceInput" placeholder="请填-原价" />
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">分类</view>
+        </view>
+        <view class="weui-cell__bd">
+       <picker bindchange="pickCategroy" value="{{ca_index}}" range="{{categorys}}">
+      <view>{{categorys[ca_index]}}</view>
+    </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">新旧</view>
+        </view>
+        <view class="weui-cell__bd">
+    <picker bindchange="picklook" mode="selector" value="{{look_index}}" range="{{looklike}}">
+    <view>{{looklike[look_index]}}</view>
+  </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">出价</view>
+        </view>
+        <view class="weui-cell__bd">
+           <van-stepper value="{{ 5 }}" bind:change="newpriceInput" />
+        </view>
+      </view>
+
+      <view class="weui-cell1 weui-cell_input1">
+        <view>
+          <view class="weui-label">微信</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class='inputwechet' auto-focus type="text" bind:change="wechatInput" placeholder="请填-wechat" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='contain2'>
+    <view class='detail_book_message2'>
+      <view class='textarea-container'>
+        <view class="">
+          备注:(选填)
+        </view>
+         <textarea class="remark-input"  bindinput="remarkInput"  placeholder="请填写备注" />
+      </view>
+    </view>
+  </view>
+
+
+  <view class='notice'>
+    注意:为了公平交易,请如实填写书本信息哦
+  </view>
+
+  <view class='btn-container'>
+    <button class='btn' bindtap="formSubmit">出手啦</button>
+  </view>
+</view>

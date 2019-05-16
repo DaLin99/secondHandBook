@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/index/index",
+    
+    "pages/first/first",
+    "pages/disScaBInf/disScaBInf",
+    "pages/administrator/administrator",
+    "pages/myno-Detail/myno-Detail",
+    "pages/admin-detail/admin-detail",
+    "pages/mybDetail/mybDetail",
+    "pages/mycheckDetail/mycheckDetail",
+    "pages/bookDetail/bookDetail",
+    "pages/mycart/mycart",
+    "pages/search/search",
+    "pages/scanCode/scanCode",
+    "pages/input/input",
+    "pages/selling/selling",
+    "pages/selled/selled",
+    "pages/checking/checking",
+    "pages/nopass/nopass",
+    "pages/mine/mine",
+    "pages/aboutus/aboutus"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#92d597",
+    "navigationBarTitleText": "南苑二手书",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/test/test",
+        "text": "首页",
+        "iconPath": "/images/首页图标.png",
+        "selectedIconPath": "/images/首页图标2.png"
+      },
+      {
+        "pagePath": "pages/scanCode/scanCode",
+        "text": "扫码卖书",
+        "iconPath": "/images/扫码卖书图标.png",
+        "selectedIconPath": "/images/扫码卖书图标2.png"
+      },
+      {
+        "pagePath": "pages/mycart/mycart",
+        "text": "购物车",
+        "iconPath": "/images/ShopCartIcon.png",
+        "selectedIconPath": "/images/ShopCartIcon2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/个人中心图标.png",
+        "selectedIconPath": "/images/个人中心图标2.png"
+      }
+    ]
+  }
+}

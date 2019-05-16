@@ -1,0 +1,23 @@
+/* pages/selling/selling.wxss */
+@import "../test/test.wxss";
+.delete{
+  margin-top: 250rpx;
+  margin-right: 20rpx;
+   width: 150rpx;
+   height: 80rpx;
+   background: #f5b264;
+   color: #fff;
+}
+.none image {
+  margin-top: 200rpx;
+  margin-left: 20rpx;
+  width: 700rpx;
+  height: 700rpx;
+}
+.selling_text{
+  text-align: center;
+  font-family: 华文新魏;
+  /* border: 2rpx solid #f5b264; */
+  background: #616c62;
+  color: #fff;
+}

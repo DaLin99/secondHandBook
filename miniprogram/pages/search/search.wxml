@@ -1,0 +1,57 @@
+<!-- pages/try/try.wxml -->
+
+<!-- 搜索框 -->
+<view class='searchShow'>
+  <view class="page">
+    <view class="search-bar">
+      <view class="search-bar__form">
+        <view class="search-bar__box">
+          <icon class="icon-search_in-box" type="search" size="14"></icon>
+          <input auto-focus="true" bindconfirm="onBindconfirm" value="{{ value }}" placeholder="书名/作者" border="{{ true }}" class="search-bar__input" />
+        </view>
+      </view>
+      <navigator url="../test/test" open-type="switchTab">
+        <view class="search-bar__cancel-btn">取消</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<!-- 提醒输入框 -->
+<block wx:if="{{!isSearch}}">
+  <view class="block-youcan" hover-class="none" hover-stop-propagation="false">
+    <text class="youcan">你可以这样输入</text>
+    <view class="tags-row">
+        <view class="tar"><text>python</text></view>
+        <view class="tar"><text>陈晓端</text></view>
+        <view class="tar"><text>屈婉玲</text></view>
+        <view class="tar"><text>麦金尼</text></view>
+        <view class="tar"><text>英语写作手册</text></view>
+        <view class="tar"><text>离散数学</text></view>
+        <view class="tar"><text>现代汉语</text></view>
+        <view class="tar"><text>计算机网络</text></view>
+        <view class="tar"><text>博雅阅读</text></view>
+        <view class="tar"><text>统计学基础</text></view>
+
+
+    </view>
+  </view>
+</block>
+
+<!-- 显示首页的图书列表 -->
+<block wx:if="{{isSearch}}">
+
+  <view wx:for="{{search_list}}" wx:key="{{index}}">
+    <view class='book_box' data-id="{{item._id }}" bindtap="viemItem">
+      <view class='book_list' hover-class='book_hover' hover-stay-time='300'>
+        <view class='book_imgae'>
+          <image class='bookimage1' src='../../images/book1.png'></image>
+          <image class='bookimage' src='{{item.img}}'></image>
+          <text class='book_name'>{{item.title}}</text>
+          <text class='book_Arthur'>{{item.author}}</text>
+          <text class='book_price'>￥{{item.newprice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

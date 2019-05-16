@@ -1,0 +1,20 @@
+<!--pages/selled/selled.wxml-->
+<import src="../book_template/book_template.wxml" />
+<!--我已经卖的书-->
+<view class='selled_text'>
+<text>我已经卖了的书</text>
+</view>
+<block wx:if="{{!isShow_sold}}">
+  <view class="none">
+<image src='../../images/none.png'></image>
+  </view>
+</block>
+<block wx:if="{{isShow_sold}}">
+ <view class="mybook" wx:for="{{soldbook_list}}" wx:key="{{index}}" >
+  
+
+<template is="book_template" data="{{...item}}" />
+    <image class='delete' src='../../images/delete.png' data-id="{{item._id }}" bindtap='del_sold'></image>
+    
+</view>
+</block>

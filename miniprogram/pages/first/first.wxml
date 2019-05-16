@@ -1,0 +1,4 @@
+<image src='../../images/background.png'></image>
+<button type="primary" bindgetuserinfo='bindGetUserInfo' open-type="getUserInfo" lang="zh_CN" bindtap="goIndex" hover-class='wsui-btn__hover_btn' class='buttonto'>
+  开启购书之旅
+</button>

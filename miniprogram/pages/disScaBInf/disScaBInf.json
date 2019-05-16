@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-stepper": "../../dist/stepper/index"
+   
+  }
+}

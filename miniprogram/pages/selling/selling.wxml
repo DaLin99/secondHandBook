@@ -1,0 +1,18 @@
+<!--pages/selling/selling.wxml-->
+<import src="../book_template/book_template.wxml" />
+<view class='selling_text'>
+<text>我正在卖的书</text>
+</view>
+<block wx:if="{{!isShow_selling}}">
+  <view class="none">
+<image src='../../images/none.png'></image>
+  </view>
+</block>
+<block wx:if="{{isShow_selling}}">
+  <view class="mybook" wx:for="{{mybook_list}}" wx:key="{{index}}"  >
+  <view class='book_box' data-id="{{item._id }}" bindtap="viemItem">
+ <template is="book_template" data="{{...item}}" />
+ </view>
+     
+</view>
+</block>

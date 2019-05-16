@@ -1,0 +1,32 @@
+<!--pages/seller/seller.wxml-->
+<import src="../book_template/book_template.wxml" />
+<view class='admin'>
+<text>管理员界面</text>
+</view>
+<!--pages/disScaBInf/disScaBInf.wxml-->
+
+<!--显示首页的图书列表-->
+<block wx-if="{{noCheck}}">
+    <text class="" >
+        暂无订单需要审核，您辛苦啦~
+    </text>
+</block>
+
+<block wx-if="{{!noCheck}}">
+   <view class="mybook" wx:for="{{book_list}}" wx:key="{{index}}"  data-id="{{item._id }}">
+    <view class='book_box' data-id="{{item._id }}" bindtap="viemItem">
+      <template is="book_template" data="{{...item}}" />
+    </view>
+  </view>
+
+
+
+
+   <!--<view wx:for="{{book_list}}" wx:key="{{index}}">
+  <van-card tag="{{item.category}}" price="{{item.newprice}}" desc="{{item.price}}" title="{{item.title}}" thumb="{{item.img}}">
+    <view slot="footer">
+      <van-button data-id="{{item._id}}" size="samll" bind:click="viemItem">查看详情</van-button>
+    </view>
+  </van-card>
+</view>-->
+</block>

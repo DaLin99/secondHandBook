@@ -1,0 +1,16 @@
+/* pages/checking/checking.wxss */
+@import "../test/test.wxss";
+@import "../selling/selling";
+.none image {
+  margin-top: 200rpx;
+  margin-left: 20rpx;
+  width: 700rpx;
+  height: 700rpx;
+}
+.checking_text{
+  text-align: center;
+  font-family: 华文新魏;
+  /* border: 2rpx solid #f5b264; */
+  background: #616c62;
+  color: #fff;
+}

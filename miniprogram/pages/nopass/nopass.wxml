@@ -1,0 +1,20 @@
+<!--pages/nopass/nopass.wxml-->
+<import src="../book_template/book_template.wxml" />
+<!--我审核不过的书-->
+<view class='nopass_text'>
+<text>未通过审核的书</text>
+</view>
+<block wx:if="{{!isShow_nosell}}">
+  <view class="none">
+<image src='../../images/none.png'></image>
+  </view>
+</block>
+
+<block wx:if="{{isShow_nosell}}">
+  <view class="mybook" wx:for="{{nobook_list}}" wx:key="{{index}}" >
+  <view class='book_box'  data-id="{{item._id }}" bindtap="viemItem">
+  <template is="book_template" data="{{...item}}" data-id='{{item._id}}' />
+  
+   </view>
+</view>
+</block>

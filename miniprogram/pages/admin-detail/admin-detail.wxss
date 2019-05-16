@@ -1,0 +1,120 @@
+/* pages/seller/seller.wxss */
+
+/*不通过的样式*/
+.nopass-container{
+  background-color: red;
+  margin-bottom: 50px;
+}
+
+.sure-no{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #2f801b;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  color: white;
+  line-height: 100rpx;
+}
+
+.two-btns {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0px;
+}
+
+.myok {
+  background-color: #2b9439;
+  color: white;
+  width: 50%;
+  border-radius: 0;
+  line-height: 100rpx;
+}
+
+.margin {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.mynook {
+  background-color: #ebb56f;
+  color: white;
+  width: 50%;
+  border-radius: 0;
+  line-height: 100rpx;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin-left: 10px;
+}
+
+.item-title {
+  margin-bottom: 10px;
+}
+
+.divLine-container {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divLine {
+  background: #e0e3da;
+  width: 100%;
+  height: 3rpx;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+.blackboard-img-container {
+  position: relative;
+  height: 500rpx;
+}
+
+.blackboard-img {
+  position: absolute;
+  z-index: 1;
+}
+
+.book-img {
+  width: 40%;
+  height: 50%;
+  left: 225rpx;
+  top: 90rpx;
+  position: absolute;
+  z-index: 2;
+}
+.weui-cell1 {
+    padding: 100rpx 30rpx;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 2rpx dashed #dbdada;
+    font-family: 华文新魏;
+    font-size: 38rpx;
+  }
+   .weui-cell_input1 {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+  }
+  .top{
+    margin-top: 20rpx;
+  }

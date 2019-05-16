@@ -1,0 +1,4 @@
+<!--pages/aboutour/aboutour.wxml-->
+<view>
+<image src='../../images/mine.png'></image>
+</view>

@@ -1,0 +1,73 @@
+<!--pages/me/me.wxml-->
+<view class='contian'>
+  <view class='bg1'>
+    <view class='head'>
+      <view class='headIcon'>
+          <!-- 显示face -->
+          <view class='touxian'>
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+      <view class='login'>
+          <!-- 显示用户名 -->
+          <view bindtap='login' class='username'>
+            <open-data type="userNickName"></open-data>
+          </view>
+      </view>
+    </view>
+
+
+    <view class='big-gird'>
+      <view bindtap='goselling'  class='smallGrid' hover-class="text_hover" hover-stay-time="300">
+        <view class='small-grid-icon'>
+          <image class='small-grid-icon img' src='../../images/mygood.png'></image>
+        </view>
+        <view class='small-grid-text '>
+          <text class='fontstlye'>我正在卖的书</text>
+        </view>
+      </view>
+
+      <view bindtap='goselled' class='smallGrid' hover-class="text_hover" hover-stay-time="300">
+        <view class='small-grid-icon'>
+          <image class='small-grid-icon img' src='../../images/mysell.png'></image>
+        </view>
+        <view class='small-grid-text '>
+          <view class='fontstlye'>我已经卖的书</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='hr'></view>
+  <view bindtap='gochecking' class='item1' hover-class="text_hover" hover-stay-time="300">
+    <view class='img'>
+      <image src='../../images/wait.png'></image>
+    </view>
+    <view class='name'>待审核的书</view>
+    <view class='detail'>
+      <text></text>
+    </view>
+  </view>
+
+  <view class='line'></view>
+  <view bindtap='gonopass' hover-class="text_hover" hover-stay-time="300" class='item2'>
+    <view class='img'>
+      <image src='../../images/nopass.png'></image>
+    </view>
+    <view class='name'>未通过审核的书</view>
+    <view class='detail'>
+      <text></text>
+    </view>
+  </view>
+
+  <view   class='line'></view>
+  <view bindtap='aboutour' class='item2' hover-class="text_hover" hover-stay-time="300">
+    <view class='img'>
+      <image src='../../images/aboutus.png'></image>
+    </view>
+    <view   class='name'>关于我们</view>
+
+  </view>
+
+</view>

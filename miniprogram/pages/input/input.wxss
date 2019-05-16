@@ -1,0 +1,52 @@
+.blackboard-img-container {
+  position: relative;
+  height: 500rpx;
+}
+
+.blackboard-img {
+  position: absolute;
+  z-index: 1;
+}
+
+.book-img {
+  width: 40%;
+  height: 50%;
+  left: 225rpx;
+  top: 90rpx;
+  position: absolute;
+  z-index: 2;
+}
+
+.weui-cell1 {
+  padding: 100rpx 30rpx;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 2rpx dashed #dbdada;
+  font-family: 华文新魏;
+  font-size: 38rpx;
+}
+
+.weui-cell_input1 {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.top {
+  margin-top: 20rpx;
+}
+.background{
+  background: #ededec;
+  margin-bottom: 100rpx;
+  width: 100%;
+}
+
+.btn{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}

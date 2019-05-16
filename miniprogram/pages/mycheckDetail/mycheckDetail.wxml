@@ -1,0 +1,171 @@
+<!--pages/mycheckDetail/mycheckDetail.wxml
+<form bindsubmit="formSubmit">
+    <view class="">
+        <image class="" src="{{book.img}}" lazy-load="false" binderror="" bindload=""></image>
+    </view>
+    <view class="bookName-container">
+        <text class="item-title">书名:</text>
+        <text class="bookname">{{book.title}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">作者：</text>
+        <text class="">{{book.author}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">ISBN：</text>
+        <text class="">{{book.isbn}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">出版社：</text>
+        <text class="">{{book.publisher}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">原价：</text>
+        <text class="">{{book.price}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">卖：{{book.newprice}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">卖家：{{book.wechat}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">备注：{{book.remark}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">品相：{{book.looklike}}</text>
+    </view>
+    <view class="">
+        <text class="item-title">简介：</text>
+        <block wx:if="{{isNone}}">
+            <text class="item-title">暂无哦</text>
+        </block>
+        <block wx:if="{{!isNone}}">
+            <text class="item-title">{{book.gist}}</text>
+        </block>
+    </view>
+    <navigator class="" url="../my/my" hover-class="navigator-hover" open-type='switchTab'>
+        <van-button type="primary" size="samll">返回菜单</van-button>
+    </navigator>
+    
+        <van-button data-bookid="{{book._id}}" type="primary" size="samll" bind:click="noSell">
+           不卖了
+        </van-button>
+</form>-->
+
+<view class='moon'></view>
+<view class='detail_top'></view>
+<view class='detail_img'>
+  <image src="{{book.img}}"></image>
+</view>
+<circle cx="100" cy="100" r="80" stroke-width="10" stroke="white" fill="transparent"></circle>
+<!-- 书本介绍 -->
+<view class='contain'>
+  <view class='detail_book_message'>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">书名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.title}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">作者</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.author}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">ISBN</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.isbn}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出版社</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.publisher}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">原价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>￥{{book.price}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text class='price'>￥{{book.newprice}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">品相</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.looklike}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">分类</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.category}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">简介</view>
+      </view>
+      <view class="weui-cell__bd">
+        <block wx:if="{{isNone}}">
+      <text >暂无哦</text>
+    </block>
+    <block wx:if="{{!isNone}}">
+      <text >{{book.gist}}</text>
+    </block>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">Wechat</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.wechat}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">备注</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.remark}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bolang'></view>
+<!-- 底部按钮 -->
+<view class="goods_bottom_btn">
+  <navigator class="" url="../test/test" hover-class="navigator-hover" open-type='switchTab'>
+    <button class="backTo" >
+      返回首页
+     </button>
+  </navigator>
+    <button class="addTocar" bindtap="noSell" data-bookid="{{book._id}}" disabled='{{disabled}}'>
+      不卖了
+   </button>
+</view>

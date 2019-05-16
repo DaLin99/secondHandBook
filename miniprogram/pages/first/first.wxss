@@ -1,0 +1,18 @@
+image{
+  width: 800rpx;
+  height: 1210rpx;
+}
+.buttonto{
+  width: 350rpx;
+  margin-top: -250rpx;
+  border: 2rpx solid #81b54a;
+  color: #fff;
+  border-radius: 50rpx;
+  margin-left: 190rpx;
+  background: #81b54a;
+}
+.wsui-btn__hover_btn {
+   opacity: 0.9;
+   transform: scale(0.95, 0.95);
+   left: 3rpx;
+  }

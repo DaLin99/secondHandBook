@@ -1,0 +1,4 @@
+
+.addToCar,.backTo{
+   border-radius: 0;
+}

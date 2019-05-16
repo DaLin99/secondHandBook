@@ -1,0 +1,116 @@
+
+<view class='moon'></view>
+<view class='detail_top'></view>
+<view class='detail_img'>
+  <image src="{{book.img}}"></image>
+</view>
+<circle cx="100" cy="100" r="80" stroke-width="10" stroke="white" fill="transparent"></circle>
+<!-- 书本介绍 -->
+<view class='contain'>
+  <view class='detail_book_message'>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">书名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.title}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">作者</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.author}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">ISBN</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.isbn}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出版社</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.publisher}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">原价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>￥{{book.price}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">出价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text class='price'>￥{{book.newprice}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">品相</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.looklike}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">分类</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.category}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">简介</view>
+      </view>
+      <view class="weui-cell__bd">
+        <block wx:if="{{isNone}}">
+      <text >暂无哦</text>
+    </block>
+    <block wx:if="{{!isNone}}">
+      <text >{{book.gist}}</text>
+    </block>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">Wechat</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.wechat}}</text>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">备注</view>
+      </view>
+      <view class="weui-cell__bd">
+        <text>{{book.remark}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bolang'></view>
+<!-- 底部按钮 -->
+<view class="bottom_btn">
+ 
+    <button class="btn-sell " data-bookid="{{book._id}}" bindtap="sold" disabled="{{isdisabled}}">
+      找到买家
+   </button>
+     <button class="btn-nosell" data-bookid="{{book._id}}" bindtap="wait"  disabled="{{isdisabled}}">
+     还没呢
+   </button>
+</view>

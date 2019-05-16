@@ -1,0 +1,55 @@
+<!-- pages/mycart/mycart.wxml -->
+<!-- 没有记录 -->
+<block wx-if="{{!cartItems.length}}">
+  <view class='noboook-container'>
+    <image class="nobook-cart" src='../../images/nobook-cart.png'></image>
+  </view>
+</block>
+<!-- 购物车 -->
+<block wx-if="{{cartItems.length}}">
+<view class="item-container" wx:for="{{cartItems}}" wx:key="{{index}}"  >
+  <view class="selected-container">
+    <view class='icon'>
+      <icon wx:if="{{item.selected}}" type="success" color="#aaf795" size="20" bindtap="selectedCart" data-index="{{index}}" />
+      <icon wx:else type="circle" bindtap="selectedCart" size="20" data-index="{{index}}" />
+    </view>
+  </view>
+  <view class="book-container" bindtap="viemItem"  data-id="{{item._id}}">
+    <view class='book-img'>
+      <image src="{{item.img}}"></image>
+    </view>
+    <view class='book-inf'>
+      <view class='book-title'>
+        27
+        <text>{{item.title}}</text>
+      </view>
+      <view class='book-author'>
+        <text>{{item.author}}</text>
+      </view>
+      <view class='book-newprice'>
+        <text>￥{{item.newprice}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="trash-container">
+    <image src='../../images/delete.png' bindtap='delItem' data-index="{{index}}"></image>
+  </view>
+</view>
+<view class="margin"></view>
+<view class='mybuttom'>
+  <view class='left'>
+    <view class='all-seclect'>
+      <view class='icon'>
+        <icon wx:if="{{CheckAll}}" type="success" color="#aaf795" size="20" bindtap="select" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="select" size="20" data-index="{{index}}" />
+        全选
+      </view>
+    </view>
+    <view class='all-total'>
+      合计:
+      <text class='total-mon'>￥{{total}}元</text>
+    </view>
+  </view>
+  <view class='right' bind:tap="delall">清空购物车</view>
+</view>
+</block>

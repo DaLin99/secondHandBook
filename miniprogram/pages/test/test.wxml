@@ -1,0 +1,47 @@
+<!-- pages/scanCode/scanCode.wxml -->
+<!--新的搜索-->
+<import src="../book_template/book_template.wxml" />
+<view bindtap='navToSearch' class='searchShow'>
+  <view class="page">
+    <view class="search-bar">
+      <view class="search-bar__form">
+        <view class="search-bar__box">
+          <icon class="icon-search_in-box"></icon>
+          <input type="text" class="search-bar__input" />
+        </view>
+        <label class="search-bar__label">
+          <icon class="icon-search" type="search" size="14"></icon>
+          <view class="search-bar__text">搜索</view>
+        </label>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 分类的地方 -->
+<view class="nav_wrap">
+  <scroll-view class="nav" scroll-x="true">
+    <view size="default" type="default" class="nav_item {{index==currentIndexNav?'active':''}}" bindtap="select_category" data-index="{{index}}" data-value="{{item}}" wx:for="{{navList}}" wx:key="{{index}}">
+      {{item}}
+    </view>
+  </scroll-view>
+</view>
+
+<!--没有卖家出手-->
+<block wx:if="{{isNone}}">
+  <view class='null'>
+    <image src='../../images/sorry.png'></image>
+    <text class="">
+      暂无卖家出手，再继续等待吧~
+   </text>
+  </view>
+</block>
+
+<!-- 书列表 -->
+<block wx:if="{{!isNone}}">
+  <view class="mybook" wx:for="{{book_list}}" wx:key="{{index}}">
+    <view class='book_box' data-id="{{item._id }}" bindtap="viemItem">
+      <template is="book_template" data="{{...item}}" />
+    </view>
+  </view>
+</block>
